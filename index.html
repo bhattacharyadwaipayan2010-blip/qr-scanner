@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Pro Tool</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Libraries -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="main-card">
+
+    <h1>QR Pro Tool</h1>
+    <p class="subtitle">Scan or Generate QR Codes Instantly</p>
+
+    <div class="mode-selector">
+        <button id="scanModeBtn" class="active">Scan QR</button>
+        <button id="generateModeBtn">Generate QR</button>
+    </div>
+
+    <!-- Scanner Section -->
+    <div id="scannerSection" class="section">
+        <div id="reader"></div>
+        <div id="resultBox" class="result-box hidden">
+            <p id="resultText"></p>
+            <div class="action-buttons">
+                <button id="copyBtn">Copy Text</button>
+                <button id="openBtn" class="hidden">Open Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generator Section -->
+    <div id="generatorSection" class="section hidden">
+        <input type="text" id="qrInput" placeholder="Enter text or URL">
+        <button id="generateBtn">Generate QR Code</button>
+        <div id="qrcode"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
